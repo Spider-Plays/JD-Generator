@@ -1,0 +1,87 @@
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f7f9fc;
+}
+
+.jd-editor {
+  outline: none;
+  min-height: 240px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1c1b1f;
+}
+
+.jd-editor h1 {
+  font-size: 1.7rem;
+  margin: 0 0 0.8rem;
+  color: #1f4e79;
+}
+
+.jd-editor h2 {
+  font-size: 1.15rem;
+  margin: 1.2rem 0 0.5rem;
+  color: #2e75b6;
+}
+
+.jd-editor h3 {
+  font-size: 1.02rem;
+  margin: 1rem 0 0.4rem;
+}
+
+.jd-editor p {
+  margin: 0 0 0.75rem;
+}
+
+.jd-editor ul,
+.jd-editor ol {
+  margin: 0 0 0.85rem;
+  padding-left: 1.3rem;
+}
+
+.jd-editor li {
+  margin-bottom: 0.3rem;
+}
+
+.jd-editor hr {
+  border: none;
+  border-top: 2px dashed #1a2568;
+  margin: 1.6rem 0;
+}
+
+.jd-editor table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.1rem;
+  table-layout: fixed;
+}
+
+.jd-editor th {
+  background: #1a2568;
+  color: #ffffff;
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid #1a2568;
+}
+
+.jd-editor td {
+  border: 1px solid #1a2568;
+  padding: 8px 12px;
+  vertical-align: top;
+  background: #ffffff;
+}
+
+.jd-editor td p {
+  margin: 0 0 0.45rem;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}

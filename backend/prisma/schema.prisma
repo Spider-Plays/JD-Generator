@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Template {
+  id                 String        @id @default(uuid())
+  name               String
+  fileName           String
+  fileType           String
+  templateContent    String
+  templateStructure  String
+  originalFile       Bytes?
+  isActive           Boolean       @default(true)
+  isBuiltIn          Boolean       @default(false)
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+  generatedJds       GeneratedJd[]
+}
+
+model GeneratedJd {
+  id                String   @id @default(uuid())
+  templateId        String
+  template          Template @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  jobTitle          String
+  sourceContent     String
+  generatedContent  String
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
